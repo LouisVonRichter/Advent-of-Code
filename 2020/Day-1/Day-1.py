@@ -13,4 +13,4 @@ for i in num:
     for j in num:
         if 2020-i - j in num:
             print(2020-i - j, i, j)
-            print(1251*289*480)
+            print(((2020-i)-j) * i * j)
