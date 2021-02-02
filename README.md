@@ -78,8 +78,8 @@
   </tr>
   <tr>
     <td class="tg-0lax">6</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <td class="tg-0lax">&#10004;	</td>
+    <td class="tg-0lax">&#10004;	</td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
@@ -87,8 +87,8 @@
   </tr>
   <tr>
     <td class="tg-0lax">7</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <td class="tg-0lax">&#10004;	</td>
+    <td class="tg-0lax">&#10004;	</td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
