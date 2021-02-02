@@ -69,8 +69,8 @@
   </tr>
   <tr>
     <td class="tg-0lax">5</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <td class="tg-0lax">&#10004;	</td>
+    <td class="tg-0lax">&#10004;	</td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
