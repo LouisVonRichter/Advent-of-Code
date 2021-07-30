@@ -10,8 +10,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Python linters Black Check
-        uses: jose-lpa/python-black-check-action@1.0.0
+      - name: Python Linter
+        uses: sunnysid3up/python-linter@v0.1-beta.7
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
