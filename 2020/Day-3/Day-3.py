@@ -9,7 +9,7 @@ slope_y = 1
 trees = 0
 for curr_y, each_line in enumerate(sled_ride):
     if each_line[curr_x] == "#":
-        trees +=1
+        trees += 1
     curr_x = (curr_x + slope_x) % len(each_line[:-1])
 print(f"Solution 1:{trees}")
 

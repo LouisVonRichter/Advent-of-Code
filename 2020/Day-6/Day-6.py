@@ -8,7 +8,7 @@ for question in lines:
         group.append(question.split("\n")[0])
     else:
         groups.append(group)
-        group=[]
+        group = []
 groups.append(group)
 
 solution_1 = []

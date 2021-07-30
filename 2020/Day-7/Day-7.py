@@ -39,8 +39,6 @@ for k, v in all_bags.items():
 print(f"{found_bags} bags can contain {my_bag} bag.")
 
 
-
-
 test_bags = {
     "shiny gold": {"dark red": 2},
     "dark red": {"dark orange": 2},
@@ -48,7 +46,7 @@ test_bags = {
     "dark yellow": {"dark green": 2},
     "dark green": {"dark blue": 2},
     "dark blue": {"dark violet": 2},
-    "dark violet": 0
+    "dark violet": 0,
 }
 
 my_bag = "shiny gold"
@@ -64,6 +62,7 @@ for k, v in test_bags.items():
         pass
 c = 0
 
+
 def count_bags(current_bag):
     if current_bag == " " or bags_contains.get(current_bag) is None:
         return 0
@@ -75,5 +74,5 @@ def count_bags(current_bag):
         cnts.append(count_bags(k))
     return sum(cnts) + cnt
 
-    
+
 print(f"{my_bag} bag can hold {count_bags('shiny gold')} bags")
