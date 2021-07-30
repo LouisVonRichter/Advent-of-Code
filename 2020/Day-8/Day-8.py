@@ -32,7 +32,6 @@ def challenge1(lines):
         # we got lucky
         if valid_solution == False:
             return current_acc, True
-    return curr_acc, False
 
 
 print("Current Accumulator: ", challenge1(lines)[0])

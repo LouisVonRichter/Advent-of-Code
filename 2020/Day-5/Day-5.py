@@ -1,4 +1,4 @@
-with open('day-5.txt', 'r') as data:
+with open("day-5.txt", "r") as data:
     seats = data.readlines()
 
 seats = [line[:-1] for line in seats]
@@ -31,5 +31,6 @@ for seat in seats:
 
 
 print(f"Solution 1: {max(seat_ids)}")
-print(f"Solution 2: {[seat for seat in range(min(seat_ids), max(seat_ids)) if seat not in seat_ids][0]}")
-
+print(
+    f"Solution 2: {[seat for seat in range(min(seat_ids), max(seat_ids)) if seat not in seat_ids][0]}"
+)

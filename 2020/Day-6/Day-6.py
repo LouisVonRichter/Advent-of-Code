@@ -1,10 +1,10 @@
 with open("day-6.txt", "r") as data:
-    lines=data.readlines()
+    lines = data.readlines()
 
 groups = []
 group = []
 for question in lines:
-    if question!="\n":
+    if question != "\n":
         group.append(question.split("\n")[0])
     else:
         groups.append(group)
@@ -21,11 +21,12 @@ for group in groups:
 print(f"Solution 1: {len(solution_1)}")
 
 from collections import Counter
+
 total = 0
 for group in groups:
     group_size = len(group)
     counts = Counter("".join(group))
 
     counts = Counter(list(counts.values()))[group_size]
-    total+=counts
+    total += counts
 print(f"Solution 2:", total)

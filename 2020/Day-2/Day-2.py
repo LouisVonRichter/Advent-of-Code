@@ -1,4 +1,4 @@
-with open('day-2.txt', 'r') as data:
+with open("day-2.txt", "r") as data:
     passw = data.readlines()
 
 passw = [i.split("\n")[0] for i in passw]
@@ -6,8 +6,8 @@ passw = [i.split("\n")[0] for i in passw]
 valid_2 = []
 valid_1 = []
 for line in passw:
-    key, value = line.split(': ')
-    char = key.split(' ')[1]
+    key, value = line.split(": ")
+    char = key.split(" ")[1]
 
     n1, n2 = key.split(" ")[0].split("-")
     n1, n2 = int(n1) - 1, int(n2) - 1

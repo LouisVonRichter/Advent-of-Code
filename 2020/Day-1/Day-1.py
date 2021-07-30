@@ -1,4 +1,4 @@
-with open('day-1.txt', 'r') as data:
+with open("day-1.txt", "r") as data:
     num = data.readlines()
 
 num = [int(i.split("\n")[0]) for i in num]
@@ -11,6 +11,6 @@ for i in num:
 print("\nQuestion 2\n")
 for i in num:
     for j in num:
-        if 2020-i - j in num:
-            print(2020-i - j, i, j)
-            print(((2020-i)-j) * i * j)
+        if 2020 - i - j in num:
+            print(2020 - i - j, i, j)
+            print(((2020 - i) - j) * i * j)
