@@ -27,7 +27,6 @@ print(len(all_passports), len(valid_passports) + 1)
 
 import re
 
-
 ecl = "amb blu brn gry grn hzl oth".split(" ")
 new_valid_passports = []
 for passport in valid_passports:
