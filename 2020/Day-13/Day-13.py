@@ -79,7 +79,5 @@ def extract_data(lines) -> (int, list):
 
     return timestamp, bus_ids
 
-
-
 print(part1(extract_data(inputs)))
 print(part2(extract_data(inputs)))
