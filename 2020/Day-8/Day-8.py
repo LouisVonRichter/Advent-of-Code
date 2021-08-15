@@ -1,37 +1,59 @@
-with open("day-8.txt", "r") as data:
-    lines = data.readlines()
-    lines = [line.rstrip() for line in lines]
+import copy
+
+ACC = 'acc'
+JMP = 'jmp'
+NOP = 'nop'
+
+with open('day-8.txt') as f:
+    inputs = [
+        line
+        for line in f.read().splitlines()
+    ]
+
+def extract_data(lines: list) -> list:
+    instructions = []
+    for line in lines:
+        operation, arg = line.split(' ')
+        instructions.append([operation, int(arg)])
+
+    return instructions
+
+def run(instructions: list) -> [bool, int]:
+    accumulator = 0
+    visited = [False for _ in instructions]
+    ix = 0
+    while (0 <= ix < len(instructions)) and (not visited[ix]):
+        visited[ix] = True
+        operation, arg = instructions[ix]
+        if operation == ACC:
+            accumulator += arg
+            ix += 1
+        elif operation == JMP:
+            ix += arg
+        elif operation == NOP:
+            ix += 1
+
+    is_terminated = ix == len(instructions)
+    return is_terminated, accumulator
 
 
-def challenge1(lines):
-    current_acc = 0
-    visited_line = set()
-    current_line = 0
-    valid_solution = True
-
-    while True:
-        if len(lines) - 1 == current_line:
-            valid_solution = False
-
-        if current_line in visited_line:
-            valid_solution = False
-            return current_acc, valid_solution
-
-        inst, acc = lines[current_line].split(" ")
-        acc = int(acc)
-        visited_line.add(current_line)
-
-        if inst == "nop":
-            current_line += 1
-        if inst == "acc":
-            current_line += acc
-            current_line += 1
-        if inst == "jmp":
-            current_line += acc
-
-        # we got lucky
-        if valid_solution == False:
-            return current_acc, True
+def part1(instructions):
+    _, accumulator = run(instructions)
+    return accumulator
 
 
-print("Current Accumulator: ", challenge1(lines)[0])
+def part2(instructions):
+    for ix, instruction in enumerate(instructions):
+        operation, arg = instruction
+        if operation in (NOP, JMP):
+            instructions_copy = copy.deepcopy(instructions)
+            instructions_copy[ix][0] = JMP if operation == NOP else NOP
+
+            is_terminated, accumulator = run(instructions_copy)
+            if is_terminated:
+                return accumulator
+    return 0
+
+
+print(part1(extract_data(inputs)))
+print(part2(extract_data(inputs)))
