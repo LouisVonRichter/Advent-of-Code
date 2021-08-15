@@ -28,8 +28,5 @@ def part2(nums):
 
     return dp[jolts[-1]]
 
-
-
-
 print(part1(inputs))
 print(part2(inputs))
