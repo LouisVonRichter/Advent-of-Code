@@ -1,6 +1,6 @@
 <h1> Advent of Code </h1>
 
-  <p>Currently all of my code for the 2020 year is in python. I eventually plan to revisit it in other languages as a way to boost my skills and learn new approaches to the problems.</p>
+  <p>Currently all of my code for the 2019/2020 year is in python. I eventually plan to revisit it in other languages as a way to boost my skills and learn new approaches to the problems.</p>
 
 <h2> What is Advent of Code </h2>
 
